@@ -1,0 +1,23 @@
+SELECT * 
+from actor
+limit 5
+
+SELECT * 
+from film
+--#2
+-- groupby
+SELECT rating, AVG (rental_rate) 
+FROM film
+GROUP BY rating
+--#3
+SELECT SUM (replacement_cost) FROM film;
+
+--#4 groupby
+SELECT rating, SUM (replacement_cost) 
+FROM film
+GROUP BY rating;
+
+SELECT MIN (length), MAX (length) FROM film;
+
+-- What is the avg
+SELECT round(AVG(renta))
